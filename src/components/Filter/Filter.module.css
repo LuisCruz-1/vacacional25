@@ -1,0 +1,132 @@
+.filterContainer {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filterGroup,
+.searchGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+.filterIcon,
+.searchIcon {
+  font-size: 1.2rem;
+  color: #6c5ce7;
+}
+
+.filterLabel,
+.searchLabel {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3436;
+}
+
+.filterSelect,
+.searchInput {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.filterSelect:focus,
+.searchInput:focus {
+  border-color: #6c5ce7;
+  outline: none;
+}
+
+.itemCount {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3436;
+  text-align: right;
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .filterContainer {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  label{
+    display: none;
+  }
+
+  .filterGroup,
+  .searchGroup {
+    width: 100%;
+  }
+
+  .filterSelect,
+  .searchInput {
+    width: 100%;
+  }
+
+  .itemCount {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+.downloadGroup {
+  position: relative;
+}
+
+.downloadButton {
+  background: #6c5ce7;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.downloadButton:hover {
+  background: #5a4ad1;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 120px;
+}
+
+.dropdownMenu button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdownMenu button:hover {
+  background: #f5f5f5;
+}

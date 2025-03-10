@@ -1,0 +1,183 @@
+.formContainer {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.formHeader h2 {
+  margin: 0;
+  color: #2d3436;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #666;
+  padding: 0.5rem;
+}
+
+.closeButton:hover {
+  color: #ff4757;
+}
+
+.formSections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  background: #f8f9ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.section h3 {
+  margin: 0 0 1.5rem 0;
+  color: #6c5ce7;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionIcon {
+  font-size: 1.2em;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: #2d3436;
+  font-size: 0.9rem;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.formGroup input:disabled,
+.formGroup select:disabled,
+.formGroup textarea:disabled {
+  background: #f5f6fa;
+  cursor: not-allowed;
+}
+
+.formGroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.formActions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.editButton,
+.saveButton,
+.cancelButton {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.editButton {
+  background: #6c5ce7;
+  color: white;
+}
+
+.editButton:hover {
+  background: #5b4bc4;
+}
+
+.saveButton {
+  background: #20bf6b;
+  color: white;
+}
+
+.saveButton:hover {
+  background: #1a9957;
+}
+
+.cancelButton {
+  background: #ff4757;
+  color: white;
+}
+
+.cancelButton:hover {
+  background: #cc3744;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 1rem;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .editButton,
+  .saveButton,
+  .cancelButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Añadir estas reglas */
+.formGrid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.formGroup input[type="date"] {
+  padding: 0.7rem;
+}
+
+.formGroup select {
+  padding: 0.8rem;
+  background: #fff;
+}
